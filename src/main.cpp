@@ -23,7 +23,7 @@ const byte PIN_DIO_O3 = 11;
 // Other
 const byte PIN_GREEN_AM = 13;
 const byte PIN_GREEN_PM = 12;
-const byte PIN_RED_YELLOW_AM = 2;
+const byte PIN_RED_ORANGE_AM = 2;
 const int BACKLIGHT = 100;
 const int YEAR_ORANGE = 2018;
 
@@ -61,7 +61,7 @@ void setup()
     pinMode(PING_RED_3, OUTPUT);
     pinMode(PIN_GREEN_AM, OUTPUT);
     pinMode(PIN_GREEN_PM, OUTPUT);
-    pinMode(PIN_RED_YELLOW_AM, OUTPUT);
+    pinMode(PIN_RED_ORANGE_AM, OUTPUT);
 
     Serial.begin(9600);
 
@@ -107,7 +107,7 @@ void setup()
         rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
     }
 
-    digitalWrite(PIN_RED_YELLOW_AM, HIGH);
+    digitalWrite(PIN_RED_ORANGE_AM, HIGH);
 }
 
 void serialPrintDatetime(DateTime now)
